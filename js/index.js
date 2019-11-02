@@ -57,5 +57,30 @@ mouseOut.addEventListener('mouseout', () => {
   console.log('mouseout');
 })
 
+// Nest two similar events somewhere in the site and prevent the event propagation properly
+
+
+
+const contentSection = document.querySelector(".content-section");
+contentSection.addEventListener("click", (event) => {
+  contentSection.style.backgroundColor = "purple";
+  console.log('contentSection');
+event.stopPropagation();
+});
+
+const body = document.querySelector("body");
+body.addEventListener("click", () => {
+  body.style.backgroundColor = 'pink';
+  console.log('end');
+});
+
+
+// Stop the navigation items from refreshing the page by using preventDefault()
+const stopLink = document.querySelector('.nav');
+stopLink.addEventListener('click', (event) => {
+  console.log('menu item click');
+  event.preventDefault();
+});
+
 
 
