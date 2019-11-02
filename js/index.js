@@ -28,3 +28,34 @@ dragImage.addEventListener('dragstart', () => {
   alert('no dragging!');
 })
 
+const focusNavHome = document.querySelectorAll('.nav a');
+focusNavHome.forEach(title => {
+    title.addEventListener('focus', () => {
+        title.style.color = "pink";
+    });
+});
+focusNavHome.forEach(title => {
+    title.addEventListener('blur', () => {
+        title.style.color = "black";
+    });
+});
+
+const mouseDown = document.querySelector('.text-content h2');
+mouseDown.addEventListener('mousedown', () => {
+  mouseDown.style.transform = "scale(1.1)";
+})
+
+const mouseOver = document.querySelector('.img-content img');
+mouseOver.addEventListener('mouseover', () => {
+  mouseOver.style.transform = "scale(1.1)";
+  console.log('mouseover');
+})
+
+const mouseOut = document.querySelector('.img-content img');
+mouseOut.addEventListener('mouseout', () => {
+  mouseOut.style.transform = "scale(1)";
+  console.log('mouseout');
+})
+
+
+
