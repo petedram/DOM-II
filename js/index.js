@@ -82,5 +82,7 @@ stopLink.addEventListener('click', (event) => {
   event.preventDefault();
 });
 
-
+TweenMax.to('.img-content', 3, {
+    rotation:360
+});
 
